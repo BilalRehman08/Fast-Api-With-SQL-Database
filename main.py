@@ -1,9 +1,9 @@
-from fastapi import FastAPI
 
+from fastapi import FastAPI, Body, Depends
+import schemas
+import models
 from database import Base, engine, SessionLocal
 from sqlalchemy.orm import Session
-
-# This will create our database if it doesent already exists
 Base.metadata.create_all(engine)
 
 

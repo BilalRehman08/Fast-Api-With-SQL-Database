@@ -1,14 +1,6 @@
-from datetime import date
+import imp
 from pydantic import BaseModel
 
 
-class Record(BaseModel):
-    id: int
-    date: date
-    country: str
-    cases: int
-    deaths: int
-    recoveries: int
-
-    class Config:
-        orm_mode = True
+class Item(BaseModel):
+    task: str
